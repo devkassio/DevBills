@@ -1,9 +1,9 @@
-import type { FastifyInstance } from 'fastify';
-import Fastify from 'fastify';
-import routes from './routes/index.js';
+import type { FastifyInstance } from "fastify";
+import Fastify from "fastify";
+import routes from "./routes/index.js";
 
 const app: FastifyInstance = Fastify({
-  logger: true,
+	logger: true,
 });
 
 app.register(routes);

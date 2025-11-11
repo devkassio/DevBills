@@ -1,26 +1,26 @@
 {
-  "recommendations": [
-    // TypeScript essenciais
-    "yoavbls.pretty-ts-errors",
-    "wix.vscode-import-cost",
+	"recommendations": [
+		// TypeScript essenciais
+		"yoavbls.pretty-ts-errors",
+		"wix.vscode-import-cost",
 
-    // Code Quality
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "usernamehw.errorlens",
-    "aaron-bond.better-comments",
+		// Code Quality
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"usernamehw.errorlens",
+		"aaron-bond.better-comments",
 
-    // IntelliSense e autocomplete
-    "christian-kohler.path-intellisense",
-    "christian-kohler.npm-intellisense",
+		// IntelliSense e autocomplete
+		"christian-kohler.path-intellisense",
+		"christian-kohler.npm-intellisense",
 
-    // Git
-    "eamodio.gitlens",
+		// Git
+		"eamodio.gitlens",
 
-    // AI assistants (já instalados)
-    "github.copilot",
-    "github.copilot-chat",
-    "visualstudioexptteam.vscodeintellicode",
-    "tabnine.tabnine-vscode"
-  ]
+		// AI assistants (já instalados)
+		"github.copilot",
+		"github.copilot-chat",
+		"visualstudioexptteam.vscodeintellicode",
+		"tabnine.tabnine-vscode"
+	]
 }
