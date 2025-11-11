@@ -1,26 +1,33 @@
 {
-	"recommendations": [
-		// TypeScript essenciais
-		"yoavbls.pretty-ts-errors",
-		"wix.vscode-import-cost",
+  "recommendations": [
+    // 🚀 Biome - Substitui ESLint + Prettier (ULTRA RÁPIDO!)
+    "biomejs.biome",
 
-		// Code Quality
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode",
-		"usernamehw.errorlens",
-		"aaron-bond.better-comments",
+    // TypeScript essenciais
+    "yoavbls.pretty-ts-errors",
+    "wix.vscode-import-cost",
 
-		// IntelliSense e autocomplete
-		"christian-kohler.path-intellisense",
-		"christian-kohler.npm-intellisense",
+    // Code Quality
+    "usernamehw.errorlens",
+    "aaron-bond.better-comments",
 
-		// Git
-		"eamodio.gitlens",
+    // IntelliSense e autocomplete
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
 
-		// AI assistants (já instalados)
-		"github.copilot",
-		"github.copilot-chat",
-		"visualstudioexptteam.vscodeintellicode",
-		"tabnine.tabnine-vscode"
-	]
+    // Git
+    "eamodio.gitlens",
+
+    // AI assistants
+    "github.copilot",
+    "github.copilot-chat",
+    "visualstudioexptteam.vscodeintellicode",
+    "tabnine.tabnine-vscode"
+  ],
+  "unwantedRecommendations": [
+    // ❌ Conflitam com Biome
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "eslint.vscode-eslint"
+  ]
 }

@@ -1,70 +1,70 @@
 {
-	// Visit https://aka.ms/tsconfig to read more about this file
-	"compilerOptions": {
-		// File Layout
-		"rootDir": "./src",
-		"outDir": "./dist",
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
 
-		// Environment Settings
-		// See also https://aka.ms/tsconfig/module
-		"module": "nodenext",
-		"target": "ES2022", // Estável e moderno - recomendado para Node.js 16+
-		"lib": ["ES2022"],
-		"types": ["node"],
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "nodenext",
+    "target": "ES2022", // Estável e moderno - recomendado para Node.js 16+
+    "lib": ["ES2022"],
+    "types": ["node"],
 
-		// Other Outputs
-		"sourceMap": true,
-		"declaration": true,
-		"declarationMap": true,
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
 
-		// Stricter Typechecking Options - RELAXADO
-		"noUncheckedIndexedAccess": false, // ❌ OFF - Muito chato
-		"exactOptionalPropertyTypes": false, // ❌ OFF - Muito rigoroso
+    // Stricter Typechecking Options - RELAXADO
+    "noUncheckedIndexedAccess": false, // ❌ OFF - Muito chato
+    "exactOptionalPropertyTypes": false, // ❌ OFF - Muito rigoroso
 
-		// Style Options - RELAXADO
-		"noImplicitReturns": false, // ❌ OFF
-		"noImplicitOverride": false, // ❌ OFF
-		"noUnusedLocals": false, // ❌ OFF - Chato durante desenvolvimento
-		"noUnusedParameters": false, // ❌ OFF - Chato durante desenvolvimento
-		"noFallthroughCasesInSwitch": true, // ✅ ON - Esse é útil
-		"noPropertyAccessFromIndexSignature": false, // ❌ OFF - Muito chato
+    // Style Options - RELAXADO
+    "noImplicitReturns": false, // ❌ OFF
+    "noImplicitOverride": false, // ❌ OFF
+    "noUnusedLocals": false, // ❌ OFF - Chato durante desenvolvimento
+    "noUnusedParameters": false, // ❌ OFF - Chato durante desenvolvimento
+    "noFallthroughCasesInSwitch": true, // ✅ ON - Esse é útil
+    "noPropertyAccessFromIndexSignature": false, // ❌ OFF - Muito chato
 
-		// Recommended Options
-		"strict": true,
-		"jsx": "react-jsx",
-		"verbatimModuleSyntax": true,
-		"isolatedModules": true,
-		"noUncheckedSideEffectImports": true,
-		"moduleDetection": "force",
-		"skipLibCheck": true,
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
 
-		// Path Mapping - Para imports mais limpos
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["src/*"],
-			"@models/*": ["src/models/*"],
-			"@controllers/*": ["src/controllers/*"],
-			"@services/*": ["src/services/*"],
-			"@utils/*": ["src/utils/*"],
-			"@config/*": ["src/config/*"],
-			"@middlewares/*": ["src/middlewares/*"],
-			"@types/*": ["src/types/*"]
-		},
+    // Path Mapping - Para imports mais limpos
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@models/*": ["src/models/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
+      "@config/*": ["src/config/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@types/*": ["src/types/*"]
+    },
 
-		// Melhor suporte para imports
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"resolveJsonModule": true,
-		"forceConsistentCasingInFileNames": true,
+    // Melhor suporte para imports
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
 
-		// Melhor experiência no editor
-		"incremental": true,
-		"tsBuildInfoFile": "./dist/.tsbuildinfo",
+    // Melhor experiência no editor
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
 
-		// Emitting
-		"removeComments": false,
-		"importHelpers": true
-	},
-	"include": ["src/**/*"],
-	"exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"]
+    // Emitting
+    "removeComments": false,
+    "importHelpers": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"]
 }
