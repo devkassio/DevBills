@@ -9,6 +9,7 @@ DevBills é uma aplicação full-stack para controle de finanças pessoais, perm
 ## 🛠️ Tecnologias
 
 ### Backend
+
 - **TypeScript** - Tipagem estática
 - **Fastify** - Framework web rápido e eficiente
 - **Node.js** - Runtime JavaScript
@@ -17,6 +18,7 @@ DevBills é uma aplicação full-stack para controle de finanças pessoais, perm
 - **Prettier** - Formatação de código
 
 ### Frontend
+
 - Em desenvolvimento...
 
 ## 📁 Estrutura do Projeto
@@ -82,11 +84,13 @@ yarn clean        # Limpa pasta dist
 ## 📡 API Endpoints
 
 ### Health Check
+
 ```http
 GET /health
 ```
 
 Retorna o status da API:
+
 ```json
 {
   "status": "ok",
@@ -96,11 +100,13 @@ Retorna o status da API:
 ```
 
 ### Categorias
+
 ```http
 GET /categories
 ```
 
 ### Transações
+
 ```http
 GET /transactions?month=4&year=2025
 POST /transactions
@@ -108,6 +114,7 @@ DELETE /transactions/:id
 ```
 
 ### Resumo
+
 ```http
 GET /transactions/summary?month=4&year=2025
 ```
@@ -150,6 +157,7 @@ Este projeto está sob a licença ISC.
 ## 👤 Autor
 
 **Kassio**
+
 - GitHub: [@devkassio](https://github.com/devkassio)
 
 ## ⭐ Mostre seu apoio

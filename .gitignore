@@ -4,6 +4,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+package-lock.json
+yarn.lock
 
 # Yarn
 .yarn/*
@@ -13,6 +15,10 @@ pnpm-debug.log*
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+
+# Lock files (manter apenas backend/yarn.lock)
+/yarn.lock
+/package-lock.json
 
 # Build
 dist/
