@@ -27,7 +27,7 @@ Obrigado por considerar contribuir para o DevBills! 🎉
 ## 🎯 Padrões de Código
 
 - Use **TypeScript** com tipagem forte
-- Siga o **ESLint** configurado
+- Siga o **Biome** configurado (linter + formatter ultra-rápido)
 - Use **Prettier** para formatação
 - Escreva **commits semânticos**
 

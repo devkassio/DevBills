@@ -47,6 +47,7 @@ Thumbs.db
 coverage/
 *.lcov
 .nyc_output/
+example.ts
 
 # Logs
 logs/

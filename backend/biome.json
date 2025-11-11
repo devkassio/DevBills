@@ -113,7 +113,14 @@
       "bracketSpacing": true,
       "bracketSameLine": false
     },
-    "globals": ["console", "process", "Buffer", "__dirname", "__filename", "NodeJS"]
+    "globals": [
+      "console",
+      "process",
+      "Buffer",
+      "__dirname",
+      "__filename",
+      "NodeJS"
+    ]
   },
   "json": {
     "formatter": {
