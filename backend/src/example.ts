@@ -95,12 +95,9 @@ const greetUser = (user: IUser): string => {
 // Exemplo de uso com destructuring
 const displayUserInfo = ({ name, email, age }: IUser): void => {
   // ! Em produção, use um logger adequado ao invés de console.log
-  // eslint-disable-next-line no-console
   console.log(`Nome: ${name}`);
-  // eslint-disable-next-line no-console
   console.log(`Email: ${email}`);
   if (age !== undefined) {
-    // eslint-disable-next-line no-console
     console.log(`Idade: ${age}`);
   }
 };
@@ -124,21 +121,21 @@ userService.addUser(newUser);
 const foundUser = userService.findUserById(1);
 
 if (foundUser !== undefined) {
-  // eslint-disable-next-line no-console
   console.log(greetUser(foundUser));
   displayUserInfo(foundUser);
 }
 
 // Exemplo de uso de generic
-const numbers = [1, 2, 3, 4, 5];
+const _numbers = [1, 2, 3, 4, 5];
+const _firstNumber = getFirstElement(_numbers);
 
-const users = userService.getAllUsers();
+const _users = userService.getAllUsers();
+const _firstUser = getFirstElement(_users);
 
 // Exemplo de Promise com async/await
 const loadUser = async (): Promise<void> => {
   try {
     const user = await fetchUserData(1);
-    // eslint-disable-next-line no-console
     console.log('Usuário carregado:', user);
   } catch (error) {
     console.error('Erro:', error);
