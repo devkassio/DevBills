@@ -1,0 +1,118 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches: [ main, master, develop ]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend.yml'
+  pull_request:
+    branches: [ main, master, develop ]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend.yml'
+
+jobs:
+  lint-and-typecheck:
+    name: 🔍 Lint & Type Check
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./backend
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+      
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          cache-dependency-path: backend/yarn.lock
+      
+      - name: 📚 Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: 🔍 Run ESLint
+        run: yarn lint
+      
+      - name: 🎯 Run Type Check
+        run: yarn type-check
+      
+      - name: ✨ Check formatting
+        run: yarn format:check
+
+  build:
+    name: 🏗️ Build
+    runs-on: ubuntu-latest
+    needs: lint-and-typecheck
+    
+    defaults:
+      run:
+        working-directory: ./backend
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+      
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          cache-dependency-path: backend/yarn.lock
+      
+      - name: 📚 Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: 🏗️ Build project
+        run: yarn build
+      
+      - name: 📤 Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: backend/dist
+          retention-days: 7
+
+  test:
+    name: 🧪 Tests
+    runs-on: ubuntu-latest
+    needs: lint-and-typecheck
+    
+    defaults:
+      run:
+        working-directory: ./backend
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+      
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+          cache-dependency-path: backend/yarn.lock
+      
+      - name: 📚 Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: 🧪 Run tests
+        run: echo "Tests will be added soon"
+        # Descomente quando tiver testes:
+        # run: yarn test
+
+  success:
+    name: ✅ All Checks Passed
+    runs-on: ubuntu-latest
+    needs: [lint-and-typecheck, build, test]
+    if: success()
+    
+    steps:
+      - name: 🎉 Success
+        run: |
+          echo "✅ All checks passed successfully!"
+          echo "🚀 Ready for deployment!"
