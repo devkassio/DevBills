@@ -1,0 +1,33 @@
+{
+  "recommendations": [
+    // 🚀 Biome - Substitui ESLint + Prettier (ULTRA RÁPIDO!)
+    "biomejs.biome",
+
+    // TypeScript essenciais
+    "yoavbls.pretty-ts-errors",
+    "wix.vscode-import-cost",
+
+    // Code Quality
+    "usernamehw.errorlens",
+    "aaron-bond.better-comments",
+
+    // IntelliSense e autocomplete
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+
+    // Git
+    "eamodio.gitlens",
+
+    // AI assistants
+    "github.copilot",
+    "github.copilot-chat",
+    "visualstudioexptteam.vscodeintellicode",
+    "tabnine.tabnine-vscode"
+  ],
+  "unwantedRecommendations": [
+    // ❌ Conflitam com Biome
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "eslint.vscode-eslint"
+  ]
+}
