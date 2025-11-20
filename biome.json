@@ -133,5 +133,16 @@
       "allowComments": true,
       "allowTrailingCommas": false
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "**/*.json", "**/*.jsonc"],
+      "formatter": {
+        "enabled": true
+      },
+      "linter": {
+        "enabled": true
+      }
+    }
+  ]
 }
