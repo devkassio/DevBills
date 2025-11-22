@@ -1,3 +1,4 @@
+import categoryRoutes from '@/routes/category.routes.js';
 import type { FastifyInstance } from 'fastify';
 
 async function routes(fastify: FastifyInstance) {
@@ -8,5 +9,6 @@ async function routes(fastify: FastifyInstance) {
       message: 'DevBills API RODANDO!',
     };
   });
+  fastify.register(categoryRoutes, { prefix: '/categories' });
 }
 export default routes;

@@ -6,6 +6,6 @@ const app: FastifyInstance = Fastify({
   logger: true,
 });
 
-app.register(routes);
+app.register(routes, { prefix: '/backend' });
 
 export default app;
